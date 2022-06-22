@@ -25,7 +25,6 @@ export const signup = createAsyncThunk(
   async (formData, { rejectWithValue }) => {
     try {
       const response = await API.post("/auth/users/signup", formData);
-      // localStorage.setItem("profile", JSON.stringify(response.data));
 
       return response.data;
     } catch (err) {
