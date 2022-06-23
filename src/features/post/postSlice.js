@@ -10,6 +10,8 @@ import {
 const initialState = {
   posts: [],
   status: null,
+  likeStatus: null,
+  deleteStatus: null,
   getPostsStatus: null,
 };
 
@@ -54,28 +56,30 @@ export const postSlice = createSlice({
         state.status = "failed";
       })
       .addCase(deletePost.pending, (state) => {
-        state.status = "loading";
+        state.deleteStatus = "loading";
       })
       .addCase(deletePost.fulfilled, (state, action) => {
+        state.deleteStatus = "success";
         const posts = state.posts.filter(
           (post) => post._id !== action.payload._id
         );
         state.posts = posts;
       })
       .addCase(deletePost.rejected, (state) => {
-        state.status = "failed";
+        state.deleteStatus = "failed";
       })
       .addCase(likePost.pending, (state) => {
-        state.status = "loading";
+        state.likeStatus = "loading";
       })
       .addCase(likePost.fulfilled, (state, action) => {
+        state.likeStatus = "success";
         const posts = state.posts.map((post) =>
           post._id === action.payload._id ? action.payload : post
         );
         state.posts = posts;
       })
       .addCase(likePost.rejected, (state) => {
-        state.status = "failed";
+        state.likeStatus = "failed";
       });
   },
 });

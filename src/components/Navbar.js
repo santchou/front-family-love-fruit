@@ -59,7 +59,7 @@ function Navbar() {
               <img
                 src={`${authLoginData?.result?.imageUrl}`}
                 alt="profile"
-                className="w-8 h-8 rounded-full"
+                className="w-8 h-8 rounded-full mr-4"
               />
             ) : (
               <div className="w-8 h-8 rounded-full bg-red-500 text-white flex justify-center items-center">

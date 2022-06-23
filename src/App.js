@@ -9,6 +9,8 @@ import ResetPassword from "./components/ResetPassword";
 import ResetPasswordMessage from "./components/ResetPasswordMessage";
 import ResetPasswordSuccess from "./components/ResetPasswordSuccess";
 
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
 function App() {
   return (
     <div className="p-4">

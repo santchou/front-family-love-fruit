@@ -2,13 +2,15 @@ import React from "react";
 import Post from "./Post";
 import { useSelector } from "react-redux";
 
+import { TailSpin } from "react-loader-spinner";
+
 function Posts({ setCurrentId }) {
   const { posts } = useSelector((state) => state.posts);
 
   return !posts.length ? (
-    <div className="flex justify-center items-center">
-      <div className="animate-spin w-8 h-8 border-4 rounded-full border-blue-500 relative">
-        <div className="absolute w-4 h-4 bg-white -top-1"></div>
+    <div className="flex justify-center items-center h-full">
+      <div className=" rounded-full bg-slate-200">
+        <TailSpin height="100" width="100" color="green" ariaLabel="loading" />
       </div>
     </div>
   ) : (
