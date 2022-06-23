@@ -2,7 +2,7 @@ import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 const API = axios.create({
-  baseURL: "https://santchou-fruit-like-by-family.herokuapp.com",
+  baseURL: "http://family-love-fruit.herokuapp.com",
 });
 
 export const login = createAsyncThunk(

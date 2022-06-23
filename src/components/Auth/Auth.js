@@ -13,10 +13,9 @@ import { RefreshIcon } from "@heroicons/react/outline";
 import Navbar from "../Navbar";
 import ForgorPassword from "../ForgorPassword";
 
-// import { ToastContainer } from "react-toastify";
-
 function Auth() {
   const auth = useSelector((state) => state.user);
+
   const emailVerify = useSelector((state) => state.emailVerify);
 
   const [formData, setFormData] = useState({
@@ -121,33 +120,6 @@ function Auth() {
   return (
     <>
       <Navbar />
-
-      {/*  {!isSignUp && emailVerify?.verifyEmailStatus === "success" ? (
-       
-          
-          <ToastContainer
-            position="top-left"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
-          <div className="pt-4 text-center">
-            <p className="text-red-600">
-              {emailVerify?.verifyEmailData?.message}
-            </p>
-            <p className="text-red-500">{emailVerify?.verifyEmailData?.name}</p>
-            <p className="text-red-400">
-              {emailVerify?.verifyEmailData?.email}
-            </p>
-          </div>
-          <ToastContainer />)
-      
-       : null} */}
 
       <div className="flex justify-center w-full ">
         <div className="w-96 py-6 px-4 shadow-lg border-4 border-slate-100 rounded-md">
