@@ -8,7 +8,7 @@ function Message() {
         {({ index }) => (
           <>
             <h1 className="font-montserrat text-xl text-sky-900 font-bold">
-              fruits and vegetables loved by the family !
+              fruits and vegetables loved by the family.
             </h1>
           </>
         )}
